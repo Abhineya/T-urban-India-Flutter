@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+
+
 void main() {
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'T-urban India',
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
@@ -24,7 +27,7 @@ class Turban extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.pink,child: Text('T-urban India'),);
+    return Scaffold(body: Container(color: Colors.pink,child: Text('T-urban India'),));
   }
 }
 
