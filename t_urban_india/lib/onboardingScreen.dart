@@ -18,33 +18,48 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: IntroductionScreen(
           pages: [
             PageViewModel(
-
-              titleWidget: Image.asset(
+decoration: PageDecoration(
+  titlePadding: EdgeInsets.all(0),
+  contentMargin: EdgeInsets.all(0),
+  fullScreen: true
+),
+              image: Image.asset(
                 'assets/onboard1.png',
-                height: MediaQuery.of(context).size.height/1.2,
+                height: MediaQuery.of(context).size.height,
                 width: double.infinity,
                 fit: BoxFit.fill,
               ),
+              titleWidget: SizedBox(),
               bodyWidget: const SizedBox()
             ),
             PageViewModel(
-
-                titleWidget: Image.asset(
+                decoration: PageDecoration(
+                    titlePadding: EdgeInsets.all(0),
+                    contentMargin: EdgeInsets.all(0),
+                    fullScreen: true
+                ),
+                image: Image.asset(
                   'assets/onboard2.png',
-                  height: MediaQuery.of(context).size.height/1.2,
+                  height: MediaQuery.of(context).size.height,
                   width: double.infinity,
                   fit: BoxFit.fill,
                 ),
+                titleWidget: SizedBox(),
                 bodyWidget: const SizedBox()
             ),
             PageViewModel(
-
-                titleWidget: Image.asset(
+                decoration: PageDecoration(
+                    titlePadding: EdgeInsets.all(0),
+                    contentMargin: EdgeInsets.all(0),
+                    fullScreen: true,
+                ),
+                image: Image.asset(
                   'assets/onboard3.png',
-                  height: MediaQuery.of(context).size.height/1.2,
+                  height: MediaQuery.of(context).size.height,
                   width: double.infinity,
                   fit: BoxFit.fill,
                 ),
+                titleWidget: SizedBox(),
                 bodyWidget: const SizedBox()
             ),
 
@@ -56,20 +71,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             Navigator.pushNamed(context, '/welcome');
           },
           curve: Curves.easeInBack,
-          skipColor: Colors.pink,
+          skipColor: Colors.white,
           initialPage: 0,
+          globalBackgroundColor: Colors.transparent,
+          controlsMargin: EdgeInsets.only(bottom: 26.0),
           animationDuration: 1200,
-          next: const Icon(
-            Icons.arrow_forward_ios_outlined,
-            color: Colors.pink,
+          next: CircleAvatar(
+            backgroundColor: Colors.white,
+            child: const Icon(
+              Icons.arrow_forward_ios_outlined,
+              color: Colors.black,
+            ),
           ),
-          skip: const Text("Skip"),
-          done: const Text('Done'),
+          skip: const Text("Skip",style: TextStyle(fontSize: 18.0),),
+          done: const Text('Done',style: TextStyle(fontSize: 18.0,color: Colors.white),),
+
           dotsDecorator: DotsDecorator(
-            activeColor: Colors.pink,
+            activeColor: Colors.white,
             size: const Size.square(10.0),
             activeSize: const Size(20.0, 10.0),
-            color: Colors.black26,
+            color: Colors.amberAccent,
             spacing: const EdgeInsets.symmetric(horizontal: 3.0),
             activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25.0)),
