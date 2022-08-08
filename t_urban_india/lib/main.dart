@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'T-urban India',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        primarySwatch: Colors.grey,
       ),
       home: OnboardingScreen(),
     );
