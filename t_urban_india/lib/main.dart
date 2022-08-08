@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t_urban_india/onboardingScreen.dart';
 
 
 
@@ -15,20 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'T-urban India',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: Turban(),
+      home: OnboardingScreen(),
     );
-  }
-}
-
-
-class Turban extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Container(color: Colors.pink,child: Text('T-urban India'),));
   }
 }
 
