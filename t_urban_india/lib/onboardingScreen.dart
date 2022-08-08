@@ -86,7 +86,7 @@ decoration: PageDecoration(
           ),
           skip: const Text("Skip",style: TextStyle(fontSize: 18.0),),
           done:MaterialButton(shape:RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20)),color:Colors.white,onPressed: (){},child: Text('Done',style: TextStyle(fontSize: 18.0,color: Colors.black),),),
+              borderRadius: BorderRadius.circular(20)),color:Colors.white,onPressed: (){},child: Text('Lets Go!',style: TextStyle(fontSize: 18.0,color: Colors.black),),),
          // done: const Text('Done',style: TextStyle(fontSize: 18.0,color: Colors.white),),
 
           dotsDecorator: DotsDecorator(
