@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Login_page extends StatefulWidget {
-  const Login_page({Key? key}) : super(key: key);
+class Sign_up_page extends StatefulWidget {
+  const Sign_up_page({Key? key}) : super(key: key);
 
   @override
-  State<Login_page> createState() => _Login_pageState();
+  State<Sign_up_page> createState() => _Sign_up_pageState();
 }
 
-class _Login_pageState extends State<Login_page> {
+class _Sign_up_pageState extends State<Sign_up_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class _Login_pageState extends State<Login_page> {
               ],
             ),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Container(
               width: 360.0,
@@ -42,7 +42,7 @@ class _Login_pageState extends State<Login_page> {
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Log in',
+                    'Sign up',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w900,
@@ -50,7 +50,7 @@ class _Login_pageState extends State<Login_page> {
                     ),
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 20.0,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -105,7 +105,40 @@ class _Login_pageState extends State<Login_page> {
                             width: 20.0,
                           ),
                           Text(
-                            'Password',
+                            'Set password',
+                            style: TextStyle(
+                              color: Colors.grey[600],
+                              fontSize: 18.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(15),
+                        topLeft: Radius.circular(15),
+                        bottomLeft: Radius.circular(15),
+                        bottomRight: Radius.circular(15),
+                      ),
+                    ),
+                    height: 50.0,
+                    width: 310.0,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 20.0,
+                          ),
+                          Text(
+                            '**************',
                             style: TextStyle(
                               color: Colors.grey[600],
                               fontSize: 18.0,
@@ -121,7 +154,7 @@ class _Login_pageState extends State<Login_page> {
                   Container(
                     child: Center(
                       child: Text(
-                        'Login',
+                        'Signup',
                         style: TextStyle(color: Colors.white, fontSize: 22.0),
                       ),
                     ),
@@ -141,7 +174,7 @@ class _Login_pageState extends State<Login_page> {
                     height: 8.0,
                   ),
                   Text(
-                    'Forgot Password ?',
+                    'Login',
                     style: TextStyle(
                       fontSize: 15.0,
                       color: Colors.grey[600],
