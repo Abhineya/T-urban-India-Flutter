@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:t_urban_india/login_page.dart';
 
 
 class OnboardingScreen extends StatefulWidget {
@@ -65,11 +66,11 @@ decoration: PageDecoration(
 
           ],
           onDone: () {
-            Navigator.pushNamed(context, '/welcome');
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login_page()));
           },
 
           onSkip: () {
-            Navigator.pushNamed(context, '/welcome');
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login_page()));
           },
           curve: Curves.easeInBack,
           skipColor: Colors.white,

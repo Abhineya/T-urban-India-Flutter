@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:t_urban_india/dashboard.dart';
+import 'package:t_urban_india/sign_up_page.dart';
 
 class Login_page extends StatefulWidget {
   const Login_page({Key? key}) : super(key: key);
@@ -35,12 +37,35 @@ class _Login_pageState extends State<Login_page> {
               height: 30,
             ),
             Container(
-              width: 360.0,
+              width: double.infinity,
               height: 650.0,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      MaterialButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Sign_up_page()));
+                        },
+                        child: Text(
+                          'Sign up',
+                          style: TextStyle(fontSize: 18.0),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20.0,
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height / 8,
+                  ),
                   Text(
                     'Log in',
                     style: TextStyle(
@@ -118,24 +143,32 @@ class _Login_pageState extends State<Login_page> {
                   SizedBox(
                     height: 40.0,
                   ),
-                  Container(
-                    child: Center(
-                      child: Text(
-                        'Login',
-                        style: TextStyle(color: Colors.white, fontSize: 22.0),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Dashboard()));
+                    },
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          'Login',
+                          style: TextStyle(color: Colors.white, fontSize: 22.0),
+                        ),
                       ),
-                    ),
-                    decoration: BoxDecoration(
-                      color: Color(0xffEB3527),
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(15),
-                        topLeft: Radius.circular(15),
-                        bottomLeft: Radius.circular(15),
-                        bottomRight: Radius.circular(15),
+                      decoration: BoxDecoration(
+                        color: Color(0xffEB3527),
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(15),
+                          topLeft: Radius.circular(15),
+                          bottomLeft: Radius.circular(15),
+                          bottomRight: Radius.circular(15),
+                        ),
                       ),
+                      height: 50.0,
+                      width: 310.0,
                     ),
-                    height: 50.0,
-                    width: 310.0,
                   ),
                   SizedBox(
                     height: 8.0,
