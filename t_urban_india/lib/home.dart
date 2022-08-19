@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -55,6 +56,11 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                  "Vector.svg",
+                ),
+              ),
               title: const Text('Saved Images'),
               onTap: () {
                 // Update the state of the app
@@ -64,6 +70,11 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                  "Vector (1).svg",
+                ),
+              ),
               title: const Text('Share App'),
               onTap: () {
                 // Update the state of the app
@@ -73,6 +84,11 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                  "Vector (2).svg",
+                ),
+              ),
               title: const Text('About'),
               onTap: () {
                 // Update the state of the app
@@ -82,6 +98,11 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                  "Vector (3).svg",
+                ),
+              ),
               title: const Text('Privacy Policy'),
               onTap: () {
                 // Update the state of the app
@@ -91,6 +112,11 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                  "Vector (4).jpg",
+                ),
+              ),
               title: const Text('How to use app ?'),
               onTap: () {
                 // Update the state of the app
