@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:t_urban_india/home.dart';
+import 'package:t_urban_india/login_page.dart';
 import 'package:t_urban_india/onboardingScreen.dart';
 
 void main() {
