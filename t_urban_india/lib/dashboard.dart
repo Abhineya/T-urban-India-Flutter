@@ -4,10 +4,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:t_urban_india/home.dart';
 
 class Dashboard extends StatefulWidget {
-
   String? userID;
   int currentIndex;
-  Dashboard({this.userID,this.currentIndex=0});
+  Dashboard({this.userID, this.currentIndex = 0});
   @override
   State<Dashboard> createState() => _DashboardState();
 }
@@ -18,7 +17,7 @@ class _DashboardState extends State<Dashboard> {
   TabController? _controller;
 
   List<Widget> _widgetOptions = <Widget>[
-HomeScreen(),
+    HomeScreen(),
     HomeScreen(),
     HomeScreen(),
     HomeScreen()
@@ -79,7 +78,7 @@ HomeScreen(),
           });
         },
       ),
-      body:_widgetOptions.elementAt(widget.currentIndex),
+      body: _widgetOptions.elementAt(widget.currentIndex),
     );
   }
 }
