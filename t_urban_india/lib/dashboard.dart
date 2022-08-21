@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:t_urban_india/home.dart';
+import 'package:t_urban_india/mapScreen.dart';
 
 class Dashboard extends StatefulWidget {
   String? userID;
@@ -18,7 +19,7 @@ class _DashboardState extends State<Dashboard> {
 
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    HomeScreen(),
+    MapScreen(),
     HomeScreen(),
     HomeScreen()
   ];

@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:t_urban_india/login_page.dart';
+
 
 class OnboardingScreen extends StatefulWidget {
   @override
@@ -17,23 +19,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: IntroductionScreen(
           pages: [
             PageViewModel(
-                decoration: PageDecoration(
-                    titlePadding: EdgeInsets.all(0),
-                    contentMargin: EdgeInsets.all(0),
-                    fullScreen: true),
-                image: Image.asset(
-                  'assets/onboard1.png',
-                  height: MediaQuery.of(context).size.height,
-                  width: double.infinity,
-                  fit: BoxFit.fill,
-                ),
-                titleWidget: SizedBox(),
-                bodyWidget: const SizedBox()),
+decoration: PageDecoration(
+  titlePadding: EdgeInsets.all(0),
+  contentMargin: EdgeInsets.all(0),
+  fullScreen: true
+),
+              image: Image.asset(
+                'assets/onboard1.png',
+                height: MediaQuery.of(context).size.height,
+                width: double.infinity,
+                fit: BoxFit.fill,
+              ),
+              titleWidget: SizedBox(),
+              bodyWidget: const SizedBox()
+            ),
             PageViewModel(
                 decoration: PageDecoration(
                     titlePadding: EdgeInsets.all(0),
                     contentMargin: EdgeInsets.all(0),
-                    fullScreen: true),
+                    fullScreen: true
+                ),
                 image: Image.asset(
                   'assets/onboard2.png',
                   height: MediaQuery.of(context).size.height,
@@ -41,31 +46,31 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   fit: BoxFit.fill,
                 ),
                 titleWidget: SizedBox(),
-                bodyWidget: const SizedBox()),
-            PageViewModel(
-              decoration: PageDecoration(
-                titlePadding: EdgeInsets.all(0),
-                contentMargin: EdgeInsets.all(0),
-                fullScreen: true,
-              ),
-              image: Image.asset(
-                'assets/onboard3.png',
-                height: MediaQuery.of(context).size.height,
-                width: double.infinity,
-                fit: BoxFit.fill,
-              ),
-              titleWidget: SizedBox(),
-              bodyWidget: const SizedBox(),
+                bodyWidget: const SizedBox()
             ),
+            PageViewModel(
+                decoration: PageDecoration(
+                    titlePadding: EdgeInsets.all(0),
+                    contentMargin: EdgeInsets.all(0),
+                    fullScreen: true,
+                ),
+                image: Image.asset(
+                  'assets/onboard3.png',
+                  height: MediaQuery.of(context).size.height,
+                  width: double.infinity,
+                  fit: BoxFit.fill,
+                ),
+                titleWidget: SizedBox(),
+                bodyWidget: const SizedBox(),
+            ),
+
           ],
           onDone: () {
-            Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (context) => Login_page()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login_page()));
           },
 
           onSkip: () {
-            Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (context) => Login_page()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login_page()));
           },
           curve: Curves.easeInBack,
           skipColor: Colors.white,
@@ -80,24 +85,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               color: Colors.black,
             ),
           ),
-          skip: const Text(
-            "Skip",
-            style: TextStyle(fontSize: 18.0),
-          ),
-          done: MaterialButton(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            color: Colors.white,
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Login_page()));
-            },
-            child: Text(
-              'Lets Go!',
-              style: TextStyle(fontSize: 18.0, color: Colors.black),
-            ),
-          ),
-          // done: const Text('Done',style: TextStyle(fontSize: 18.0,color: Colors.white),),
+          skip: const Text("Skip",style: TextStyle(fontSize: 18.0),),
+          done:MaterialButton(shape:RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20)),color:Colors.white,onPressed: (){
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login_page()));
+          },child: Text('Lets Go!',style: TextStyle(fontSize: 18.0,color: Colors.black),),),
+         // done: const Text('Done',style: TextStyle(fontSize: 18.0,color: Colors.white),),
 
           dotsDecorator: DotsDecorator(
             activeColor: Colors.white,
