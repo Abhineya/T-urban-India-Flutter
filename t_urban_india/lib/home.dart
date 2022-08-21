@@ -58,7 +58,7 @@ class MyHomePage extends StatelessWidget {
             ListTile(
               leading: CircleAvatar(
                 backgroundImage: AssetImage(
-                  "Vector.svg",
+                  "SavedImages.svg",
                 ),
               ),
               title: const Text('Saved Images'),
@@ -72,7 +72,7 @@ class MyHomePage extends StatelessWidget {
             ListTile(
               leading: CircleAvatar(
                 backgroundImage: AssetImage(
-                  "Vector (1).svg",
+                  "ShareApp.svg",
                 ),
               ),
               title: const Text('Share App'),
@@ -86,7 +86,7 @@ class MyHomePage extends StatelessWidget {
             ListTile(
               leading: CircleAvatar(
                 backgroundImage: AssetImage(
-                  "Vector (2).svg",
+                  "About.svg",
                 ),
               ),
               title: const Text('About'),
@@ -100,7 +100,7 @@ class MyHomePage extends StatelessWidget {
             ListTile(
               leading: CircleAvatar(
                 backgroundImage: AssetImage(
-                  "Vector (3).svg",
+                  "PrivacyPolicy.svg",
                 ),
               ),
               title: const Text('Privacy Policy'),
@@ -112,34 +112,31 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                  "Vector (4).svg",
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage(
+                    "HowToUse.svg",
+                  ),
                 ),
-              ),
-              title: const Text('How to use app ?'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              }  
-            ),
+                title: const Text('How to use app ?'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                }),
             ListTile(
-              leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                  "Vectorlogout.svg",
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage(
+                    "Logout.svg",
+                  ),
                 ),
-              ),
-              title: const Text('Logout'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              }  
-            ),
-            
+                title: const Text('Logout'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                }),
             SizedBox(
               height: 230.0,
             ),
